@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap&subset=latin-ext');
+
+//transparent
+$transparent: transparent;
+
+//colors
+$black: #000000;
+$green: #198C19;
+$lightblue: #2196F3;
+$lightgrey: #E9EBEE;
+$backgroundGrey: rgb(26, 72, 141);
+$oceanblue: #3767AD;
+$white: #FFFFFF;
+$orange:#E59400;
+//fonts
+$robotFont: 'Roboto', sans-serif;
+
+//resolution for media query
+$telephone: 640px;
+
+//link style hover
+$hoverStyleLink: $orange solid 2px;  
