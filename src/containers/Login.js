@@ -1,12 +1,6 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
 import React, { Component } from 'react';
 import Box from '../components/Box';
+import FooterLoginPage from '../components/FooterLoginPage';
 import InputField from '../components/InputField';
 import Error from '../components/Error';
 import FooterFormButton from '../components/FooterFormButton';
@@ -53,36 +47,31 @@ class Login extends Component {
         };
         
         return (
-                <section>
                 <form onSubmit={event => { this.submitLogin(event);}}>
-                    <div>
-                        <InputField id="email" type="text" label="E-mail" 
+                        <InputField id="email" type="text" label="E-mail" class="auth__input"
                                     inputAction={(event) => this.setState({ email: event.target.value })}
                                     style={ this.state.error ? errStyle : null }
                         />
-                        <InputField id="password" type="password" label="Hasło" 
+                        <InputField id="password" type="password" label="Password" 
                                     inputAction={(event) => this.setState({ password: event.target.value })}
                                     style={ this.state.error ? errStyle : null }
                         />
-                        
-                        {this.state.error && <Error>Email/hasło niepoprawne</Error>}
-                        
-                        <FooterFormButton submitLabel="Zaloguj" otherLabel="Zostań trenerem" goToLink="/createAccount" { ...this.props }/>
-                    </div>
+                        {this.state.error && <Error>E-mail/hasło niepoprawne</Error>}
                     
+                    <FooterFormButton submitLabel="Log in" otherLabel="Sign up" goToLink="/createAccount" { ...this.props }/>
+
                 </form>
-                </section>
                 );
     }
 
     render() {
         return(
-               <div>
-                    <Box title="Logowanie" body={this.renderBody()}></Box>
-                            <div class="containerInput">
-                            <p>&copy; 2018 <b>Łukasz Sokołek</b>, All rights reserved</p>
-                            </div>
-               </div>
+
+                   <main class="main">
+                    <Box title="CoachApp" body={this.renderBody()}></Box>
+                    <FooterLoginPage></FooterLoginPage>
+                    </main>
+
               );
 
         }

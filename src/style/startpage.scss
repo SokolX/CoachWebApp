@@ -1,0 +1,73 @@
+/*Style for login and register page*/
+
+.main {
+    height: 100vh;
+    background: url('../image/tartan-track-2678544_1920.jpg');
+
+}
+
+input[type=text] [type=password]{
+  width: max-content;
+
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.auth {
+  background-color: $lightgrey;
+  border-radius: 8px;
+  width: 16%;
+  padding: 16px;
+  align-content: center;
+  margin: auto;
+  font-size: 1.2rem;
+  @media (max-width: $telephone) {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  &__button {
+    width: 100%;
+    border: none;
+    margin: 10% auto 2% auto;
+    text-transform: uppercase;
+    padding: 8px;
+
+    &--login {
+      background: $green;
+      color: $white;
+    }
+
+    &--signup {
+      background: $lightgrey;
+    }
+  }
+
+  &__header {
+    text-align: center;
+    font-size: 2rem;
+    color: #198c19;
+    padding: 8px;
+  }
+  
+  &__input {
+    margin: 2% auto 2% 5%;
+    padding: 0;
+    width: max-content;
+  }
+  
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+  background-color: $green;
+  color: $white;
+}

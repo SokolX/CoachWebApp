@@ -1,13 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
 import React, { Component } from 'react';
 import Box from '../components/Box';
 import InputField from '../components/InputField';
+import FooterLoginPage from '../components/FooterLoginPage';
 import Error from '../components/Error';
 import FooterFormButton from '../components/FooterFormButton';
 import { createAccount } from '../actions/UserActions';
@@ -75,8 +69,7 @@ class CreateAccount extends Component {
       borderColor: 'red'
     };
     return (
-      <div>
-          <section>
+
         <form onSubmit={(event) => this.submitAccount(event)}>
           <InputField id="email" type="text" label="E-mail"
                       inputAction={(event) => this.setState({ email: event.target.value })}
@@ -93,19 +86,16 @@ class CreateAccount extends Component {
           </Error>}
           <FooterFormButton submitLabel="Stwórz konto" otherLabel="Wróć" goToLink="/Login" {...this.props}/>
         </form>
-        </section>
-      </div>
+
     );
   }
 
     render() {
         return(
-            <div>
+            <main class="main">
                 <Box title="Rejestracja" body={this.renderBody()}></Box>
-                        <div class="containerInput">
-                            <p>&copy; 2018 <b>Łukasz Sokołek</b>, All rights reserved</p>
-                        </div>
-            </div>
+                <FooterLoginPage></FooterLoginPage>
+            </main>
             );
         }
 }

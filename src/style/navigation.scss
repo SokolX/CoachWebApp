@@ -2,11 +2,10 @@
     background: $green;
     box-sizing: border-box;
     left: 0;
-    padding: 8px;
+    padding: 0;
     position: fixed;
     width: 100%;
     top: 0;
-  
     @media (max-width: $telephone) {
       min-height: 48px;
     }

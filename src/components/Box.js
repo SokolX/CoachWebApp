@@ -6,13 +6,11 @@ render() {
     const { title, body, footer } = this.props;
         
     return (
-            <div>
-                <main class="main-start-page">
-                    <h1>{title}</h1>
-                        {body}          
-                        {footer}  
-                </main>               
-            </div>
+            <main class="auth">
+                <h1 class="auth__header">{title}</h1>
+                {body}        
+                {footer}  
+            </main>               
         )
     }
 }
