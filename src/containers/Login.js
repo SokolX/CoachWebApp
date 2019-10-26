@@ -66,12 +66,10 @@ class Login extends Component {
 
     render() {
         return(
-
-                   <main class="main">
+                <main class="main-login">
                     <Box title="CoachApp" body={this.renderBody()}></Box>
                     <FooterLoginPage></FooterLoginPage>
-                    </main>
-
+                </main>
               );
 
         }

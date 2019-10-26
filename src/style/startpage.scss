@@ -1,20 +1,17 @@
 /*Style for login and register page*/
 
-.main {
+.main-login {
     height: 100vh;
     background: url('../image/tartan-track-2678544_1920.jpg');
 
+    @media (max-width: $telephone) {
+      background: $lightgrey;
+      width: 100%;
+      margin-top: 50px;
+    }
 }
 
-input[type=text] [type=password]{
-  width: max-content;
 
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
 
 .auth {
   background-color: $lightgrey;
@@ -25,8 +22,9 @@ input[type=text] [type=password]{
   margin: auto;
   font-size: 1.2rem;
   @media (max-width: $telephone) {
-    width: 100%;
-    margin-top: 50px;
+    width: 80%;
+    margin: 4% auto 4% auto;
+    padding: 0;
   }
 
   &__button {
@@ -53,10 +51,14 @@ input[type=text] [type=password]{
     padding: 8px;
   }
   
-  &__input {
-    margin: 2% auto 2% 5%;
-    padding: 0;
-    width: max-content;
+  &__input{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    align-content: center;
+    margin: 2% auto 2% auto;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
   }
   
 }

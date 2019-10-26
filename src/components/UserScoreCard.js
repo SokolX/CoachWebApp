@@ -5,51 +5,51 @@ import { Link, Route } from 'react-router-dom';
 const UserScoreCard = (props) => {
     
         return (
-                <div className="containerAccount">
-                    <h1 className="card-header">{props.name}
+                <section class="containerCenter">
+                    <h1>{props.name}
                         <Link to={props.toMessage}><button className="btn btn-success">Wiadomości</button></Link>
                     </h1>
-                            <div class="row">
-                                <div class="col-lg-4">E-mail:</div>
-                                <div class="col-lg-8">{ props.email }</div>
+                            <div>
+                                <div>E-mail:</div>
+                                <div>{ props.email }</div>
                             </div>
-                        
-                        <h2 className="card-header">Podstawowe informacje: </h2>
+            
+                        <h2>Podstawowe informacje: </h2>
                             <div class="row">
-                                <div class="col-lg-4">Miejsce zamieszkania:</div>
-                                <div class="col-lg-8">{ props.address }</div>
-                                <div class="col-lg-4">Data urodzenia:</div>
-                                <div class="col-lg-8">
+                                <div>Miejsce zamieszkania:</div>
+                                <div>{ props.address }</div>
+                                Data urodzenia:
+                                
                                     <Moment unix format="DD/MM/YYYY">{ props.dateOfBirth }</Moment>
-                                </div>
-                                <div class="col-lg-4">Wzrost:</div>
-                                <div class="col-lg-8">{ props.height } cm</div>
-                                <div class="col-lg-4">Waga:</div>
-                                <div class="col-lg-8">{ props.weight } kg</div>
-                                <div class="col-lg-4">Płeć:</div>
-                                <div class="col-lg-8">{props.genderType}</div> 
+                                
+                                
+                                { props.height } cm
+                                
+                                { props.weight } kg
+                                
+                                {props.genderType}
                             </div>
                         
-                        <h2 className="card-header">BMI
+                        <h2>BMI
                            <Link to={props.toBmi}><button className="btn btn-success">Wszystkie</button></Link>
                         </h2>
-                            <div class="row">
-                                <div class="col-lg-4">BMI:</div>
-                                <div class="col-lg-8">{ props.measureBMI }</div>
-                                <div class="col-lg-4">Liczba wykonanych pomiarów:</div>
-                                <div class="col-lg-8">{ props.numberOfBmi }</div>
+                            <div>
+                                <div>BMI:</div>
+                                <div>{ props.measureBMI }</div>
+                                <div>Liczba wykonanych pomiarów:</div>
+                                <div>{ props.numberOfBmi }</div>
                             </div>
 
                         <h2 className="card-header">Treningi
                             <Link to={props.toHistory}><button className="btn btn-success">Wszystkie</button></Link>
                         </h2>
                             <div class="row">
-                                <div class="col-lg-4">Liczba pokonanych kroków:</div>
-                                <div class="col-lg-8">{ props.userStepsCounterEver } kroków</div>
-                                <div class="col-lg-4">Liczba odbytych treningów:</div>
-                                <div class="col-lg-8">{ props.numberOfWorkout }</div>
+                                <div>Liczba pokonanych kroków:</div>
+                                <div>{ props.userStepsCounterEver } kroków</div>
+                                <div>Liczba odbytych treningów:</div>
+                                <div>{ props.numberOfWorkout }</div>
                             </div> 
-                </div>
+                </section>
                 );
 };
 

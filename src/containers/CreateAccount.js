@@ -74,17 +74,17 @@ class CreateAccount extends Component {
           <InputField id="email" type="text" label="E-mail"
                       inputAction={(event) => this.setState({ email: event.target.value })}
                       style={this.state.error ? errStyle : null }/>
-          <InputField id="password" type="password" label="Hasło"
+          <InputField id="password" type="password" label="Password"
                       inputAction={(event) => this.setState({ password: event.target.value })}
                       style={this.state.error ? errStyle : null }/>
-          <InputField id="confirm-password" type="password" label="Potwierdź hasło"
+          <InputField id="confirm-password" type="password" label="Password"
                       inputAction={(event) => this.setState({ confirmPassword: event.target.value })}
                       style={this.state.error ? errStyle : null }/>
                       
           {this.state.error && <Error>
             {this.state.error}
           </Error>}
-          <FooterFormButton submitLabel="Stwórz konto" otherLabel="Wróć" goToLink="/Login" {...this.props}/>
+          <FooterFormButton submitLabel="Sign Up" otherLabel="Existing user?" goToLink="/Login" {...this.props}/>
         </form>
 
     );
@@ -92,7 +92,7 @@ class CreateAccount extends Component {
 
     render() {
         return(
-            <main class="main">
+            <main class="main-login">
                 <Box title="Rejestracja" body={this.renderBody()}></Box>
                 <FooterLoginPage></FooterLoginPage>
             </main>
