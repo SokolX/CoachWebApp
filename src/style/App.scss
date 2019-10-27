@@ -54,14 +54,15 @@ body {
 
 .containerLeft {
     grid-area: containerLeft;
-    background-color: silver;
+    @include boxStyle;
+    font-size: 0.8rem;
 }
 .containerRight {
     grid-area: containerRight;
-    background-color: brown;
+    @include boxStyle;
 }
 .containerCenter {
     grid-area:  containerCenter;
-    background-color: goldenrod;
+    @include boxStyle;
     display: flex;
 }

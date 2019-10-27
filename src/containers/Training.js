@@ -13,7 +13,7 @@ class Training extends Component {
    
     renderNavbar() {
         return(
-            <header class="site-header">
+            <header class="header">
                 <nav class="navigation">
                     <ul class="navigation__list navigation__list--js">
                         <li class="navigation__item">
@@ -83,14 +83,14 @@ class Training extends Component {
     render() {
         
         return (
-                <div>
+                <main class="main">
+
                     { this.renderNavbar() }
-                   <div class="scroll">
-                         <div class="left">  
-                            { this.renderSideBarLeft() }
-                        </div>
-                    </div>
-                </div>
+
+                    <section class="containerLeft"> 
+                        { this.renderSideBarLeft() }
+                    </section>    
+                </main>
                 );
     }
 };

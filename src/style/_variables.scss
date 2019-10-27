@@ -5,6 +5,7 @@ $transparent: transparent;
 
 //colors
 $black: #000000;
+$darkgrey: #D3D3D3;
 $green: #198C19;
 $lightblue: #2196F3;
 $lightgrey: #E9EBEE;
@@ -21,3 +22,10 @@ $tablet: 1024px;
 
 //link style hover
 $hoverStyleLink: $orange solid 2px;  
+
+@mixin boxStyle {
+    background: $white;
+    border: 1px solid $darkgrey;
+    border-radius: 5px;
+    padding: 0.5rem;
+  }

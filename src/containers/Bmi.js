@@ -12,7 +12,7 @@ class Bmi extends Component {
 
     renderNavbar() {
         return(
-                <header class="site-header">
+                <header class="header">
                     
                     <nav class="navigation">
                         <ul class="navigation__list navigation__list--js">
@@ -64,16 +64,16 @@ class Bmi extends Component {
     render() {
                 
         return (
-                <div>
+                <main class="main">
 
                     { this.renderNavbar() }
-                    <div class="scroll">
-                        <div class="left">    
+                    
+                        <section class="containerLeft">    
                             { this.renderSideBarLeft() }
-                        </div>
-                    </div>
+                        </section>
+                    
 
-                </div>
+                </main>
                
                 );
     }

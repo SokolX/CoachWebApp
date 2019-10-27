@@ -103,6 +103,10 @@ class Players extends Component {
                         <section class="containerRight">  
                             { this.renderSideBarLeft()}
                         </section>
+
+                        <section class="containerCenter">  
+                            { this.renderUsersScore()}
+                        </section>
                 </main>
                 );
     }
